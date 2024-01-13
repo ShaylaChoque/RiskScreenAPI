@@ -1,4 +1,4 @@
-﻿namespace RiskScreenAPI.Security.Domain.Repositories;
+﻿namespace RiskScreenAPI.Shared.Domain.Repositories;
 
 public interface IUnitOfWork
 {

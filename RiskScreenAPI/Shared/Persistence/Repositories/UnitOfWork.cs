@@ -1,4 +1,4 @@
-﻿using RiskScreenAPI.Security.Domain.Repositories;
+﻿using RiskScreenAPI.Shared.Domain.Repositories;
 using RiskScreenAPI.Shared.Persistence.Contexts;
 
 namespace RiskScreenAPI.Shared.Persistence.Repositories;

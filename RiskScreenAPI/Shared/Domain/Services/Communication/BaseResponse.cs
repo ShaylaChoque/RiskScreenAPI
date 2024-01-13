@@ -4,7 +4,7 @@ public abstract class BaseResponse<T>
 {
     public bool Success { get; set; }
     public string Message { get; set; }
-    public T Resource { get; set; } //T?
+    public T Resource { get; set; }
     protected BaseResponse(T resource)
     {
         Success = true;
