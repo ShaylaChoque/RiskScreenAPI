@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'riskscreenapi'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9600CF5816E7434DBA1551201EED3B2E }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8A743E97678B40F7B33D2D9E08487846 }}
           package: .
