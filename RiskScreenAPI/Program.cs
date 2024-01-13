@@ -75,7 +75,7 @@ builder.Services.AddDbContext<AppDbContext>(
     options =>
     {
         if (connectionString != null)
-            options.UseMySQL(connectionString)
+            options.UseSqlServer(connectionString)
                 .LogTo(Console.WriteLine, LogLevel.Information)
                 .EnableSensitiveDataLogging()
                 .EnableDetailedErrors();
