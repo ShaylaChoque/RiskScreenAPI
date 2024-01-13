@@ -6,7 +6,7 @@ using RiskScreenAPI.Security.Domain.Services;
 using RiskScreenAPI.Security.Domain.Services.Communication;
 using RiskScreenAPI.Security.Resources;
 
-namespace RiskScreenAPI.Security.Controllers;
+namespace RiskScreenAPI.Security.Controller;
 
 [ApiController]
 [Route("/api/[controller]")]

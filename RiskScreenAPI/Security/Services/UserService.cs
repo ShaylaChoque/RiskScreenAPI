@@ -7,6 +7,7 @@ using RiskScreenAPI.Security.Domain.Repositories;
 using RiskScreenAPI.Security.Domain.Services;
 using RiskScreenAPI.Security.Domain.Services.Communication;
 using RiskScreenAPI.Security.Exceptions;
+using RiskScreenAPI.Shared.Domain.Repositories;
 
 namespace RiskScreenAPI.Security.Services;
 
