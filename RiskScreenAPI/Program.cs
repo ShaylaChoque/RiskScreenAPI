@@ -11,8 +11,13 @@ using RiskScreenAPI.Security.Domain.Repositories;
 using RiskScreenAPI.Security.Domain.Services;
 using RiskScreenAPI.Security.Persistence.Repositories;
 using RiskScreenAPI.Security.Services;
+using RiskScreenAPI.Shared.Domain.Repositories;
 using RiskScreenAPI.Shared.Persistence.Contexts;
 using RiskScreenAPI.Shared.Persistence.Repositories;
+using RiskScreenAPI.Web.Domain.Repository;
+using RiskScreenAPI.Web.Domain.Service;
+using RiskScreenAPI.Web.Persistence.Repositories;
+using RiskScreenAPI.Web.Services;
 using RiskScreenAPI.WebScraping.Domain.Service;
 using RiskScreenAPI.WebScraping.Services;
 
@@ -99,10 +104,17 @@ builder.Services.AddScoped<IJwtHandler, JwtHandler>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
 
+// Inject dependencies
+builder.Services.AddScoped<IProviderRepository, ProviderRepository>();
+builder.Services.AddScoped<IProviderService, ProviderService>();
+
 // Automapper configuration
 builder.Services.AddAutoMapper(
     typeof(RiskScreenAPI.Security.Mapping.ModelToResourceProfile),
-    typeof(RiskScreenAPI.Security.Mapping.ResourceToModelProfile));
+    typeof(RiskScreenAPI.Security.Mapping.ResourceToModelProfile),
+    typeof(RiskScreenAPI.Web.Mapping.ModelToResourceProfile),
+    typeof(RiskScreenAPI.Web.Mapping.ResourceToModelProfile)
+    );
 
 var app = builder.Build();
 
